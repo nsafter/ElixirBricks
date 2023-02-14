@@ -41,6 +41,7 @@ const Home = () => {
 
       <div className="container">
         {data.slice(0, 4).map((item) => {
+          /* reusable component */
           return (
             <Card
               url={img2}

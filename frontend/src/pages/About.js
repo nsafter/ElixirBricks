@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 const About = () => {
   return (
     <>
+      {/* reusable navabr component  */}
       <Navbar />
       <div className="about-container">
         <div className="cont-inner-div">

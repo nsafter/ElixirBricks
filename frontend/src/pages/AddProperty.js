@@ -6,8 +6,11 @@ import "./styles/AddProperty.css";
 import Navbar from "../components/Navbar";
 
 function AddProperty() {
+  // environment path variable path;
   const path = process.env.REACT_APP_PATH;
+  // to navigate to other components;
   const navigate = useNavigate();
+  // useState hook to store the user input and send to the backend
   let [property, setProperty] = useState({
     name: "",
     description: "",
@@ -20,6 +23,7 @@ function AddProperty() {
 
   const [user, setUser] = useState("");
 
+  // state updated whenever user changes the input
   const handleChange = (event) => {
     setProperty({
       ...property,
@@ -35,6 +39,7 @@ function AddProperty() {
     });
   }, []);
 
+  // adds property to the "properties" table of database
   const handleSubmit = () => {
     axios.post(`${path}/addproperty`, { property, user });
     navigate("/home");
@@ -42,6 +47,7 @@ function AddProperty() {
 
   return (
     <>
+      {/* here props post={true} removes the post property button after the user enters the post property page */}
       <Navbar post={true} />
       <div className="about-container">
         <div className="cont-inner-div">

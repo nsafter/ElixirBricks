@@ -21,6 +21,7 @@ const Calculator = () => {
 
   let emiVal = calculateEMI(principal, rateOfInterest, tenure);
 
+  // object for the doughnut chart
   const data = {
     labels: ["Principal Amount", "Interest Amount"],
     datasets: [

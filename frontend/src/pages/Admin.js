@@ -9,11 +9,15 @@ const Admin = () => {
 
   const [data, setData] = useState([]);
 
+  // store the input of search bar
   const [q, setQ] = useState("");
+  // parameters based on which searching will be done
   const [searchParam] = useState(["name", "uname"]);
 
   function search() {
+    // filter the data on the basis of input by user in search box
     return data.filter((item) => {
+      // here some function returns a new array fulfilling the search criterai
       return searchParam.some((newItem) => {
         return (
           item[newItem].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
@@ -32,6 +36,7 @@ const Admin = () => {
     getData();
   }, []);
 
+  // property deleted where the "sno" field of every property is mapped with the delete button of every record in the table
   const deleteAPIData = (id) => {
     axios.delete(`${path}/propdel/${id}`).then(() => {
       getData();
@@ -42,6 +47,7 @@ const Admin = () => {
     return () => clearTimeout(timeoutId);
   };
 
+  // handles logout where at backend checked that whether a session exists or not -> clears cookie and destroys session
   const handleLogOut = () => {
     try {
       axios.get(`${path}/logout`);
