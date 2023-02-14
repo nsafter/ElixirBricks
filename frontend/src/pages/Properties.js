@@ -90,7 +90,7 @@ const Properties = () => {
               <input
                 type="range"
                 min="500"
-                max="500000"
+                max="50000"
                 step="150"
                 onChange={(e) => setArea(parseInt(e.target.value))}
               />
