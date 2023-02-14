@@ -1,0 +1,36 @@
+.parentvideo {
+  overflow: hidden;
+}
+
+.videoTag {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.childvideo {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.name {
+  font-size: 105px;
+  color: #ffffff;
+  text-align: center !important;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 70px;
+}
+
+.quote {
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-align: center !important;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  font-family: "Dancing Script", cursive;
+}

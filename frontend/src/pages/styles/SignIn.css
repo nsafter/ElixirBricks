@@ -1,0 +1,91 @@
+.register-container {
+  background-color: #c689c6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.img-left {
+  height: 520px;
+  width: 400px;
+}
+
+.right-div {
+  height: 520px;
+  width: 82%;
+  background-color: #ffecef;
+  margin-top: 2.5px;
+}
+
+.label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 7%;
+  padding-left: 10%;
+}
+
+.res-inp {
+  margin-top: 3px;
+  margin-left: 10%;
+  height: 20px;
+  width: 80%;
+  background-color: transparent;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.res-inp::placeholder {
+  color: black;
+}
+
+.res-btn {
+  font-size: 1.1rem;
+  height: 50px;
+  width: 130px;
+  margin-left: 10%;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: background-color 200ms ease, color 200ms ease;
+  cursor: pointer;
+}
+
+.res-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.col-25 {
+  width: 25%;
+  margin-left: 10%;
+  padding-top: 5%;
+}
+
+.col-75 {
+  width: 75%;
+  padding-top: 4.8%;
+  padding-left: 3%;
+}
+
+.new-acc-label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 7%;
+  padding-left: 10%;
+  cursor: pointer;
+}
+
+.errcode {
+  margin-left: 10%;
+  margin-top: 5%;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

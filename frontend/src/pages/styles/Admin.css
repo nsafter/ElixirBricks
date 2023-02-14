@@ -1,0 +1,121 @@
+.read-container {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    #4c0033,
+    #790252,
+    #af0171,
+    #e80f88
+  );
+  padding: 50px;
+}
+
+.table-data {
+  width: 90%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.table-data th,
+td {
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 16px;
+  text-align: center;
+}
+
+.table-data th {
+  color: white;
+  font-size: 1.6rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.thead {
+  background-color: #d58bdd;
+}
+
+.table-data tr:nth-child(even) {
+  background-color: #ffe6f7;
+  transition: background-color 500ms ease;
+}
+
+.table-data tbody tr:hover {
+  background-color: #fbd6d2;
+}
+
+.btn {
+  cursor: pointer;
+  height: 45px;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 200ms ease, color 200ms ease;
+  background-color: transparent;
+  border: 1px solid #c689c6;
+  color: #c689c6;
+}
+
+.update-btn:hover {
+  background-color: #af0171;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d2001a;
+  color: white;
+  border: 1px solid #d2001a;
+}
+
+.search-bar {
+  width: 40%;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.search-bar::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search-bar::placeholder {
+  color: white;
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+
+.inv-btn {
+  cursor: pointer;
+  height: 70px;
+  width: 150px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 2px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.inv-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.logoutadmin-btn {
+  font-size: 1.1rem;
+  height: 35px;
+  width: 110px;
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
