@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  top: 0;
+}
+
 .childProp {
   position: relative;
 }
@@ -23,27 +28,23 @@
 }
 
 .filters {
-  margin-top: 320px;
-  position: absolute;
   z-index: 3;
   display: flex;
 }
 
 .filter-label {
   color: white;
-  font-size: 1.15rem;
-  padding-left: 24px;
+  font-size: 0.95rem;
+  padding-left: 30px;
 }
 
 .value-label {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .filter-btn {
-  position: absolute;
-  margin-top: 410px;
-  margin-left: 44%;
+  /* position: absolute; */
   font-size: 1.1rem;
   height: 50px;
   width: 130px;
@@ -52,6 +53,7 @@
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  z-index: 4;
 }
 
 .budget {

@@ -54,86 +54,87 @@ const Properties = () => {
           <img src={property} alt="noimg" className="property-img" />
           <span className="slogan animate__animated animate__fadeInDown">
             Search for Homes in Your Neighbourhood
+            <div className="filters">
+              <div>
+                <label className="filter-label">Beds: </label>
+                <select onChange={(e) => setBedroom(parseInt(e.target.value))}>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                  <option value={6}>6</option>
+                  <option value={7}>7</option>
+                </select>
+              </div>
+              <div>
+                <label className="filter-label">Baths:</label>
+                <select onChange={(e) => setBathroom(parseInt(e.target.value))}>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                  <option value={6}>6</option>
+                  <option value={7}>7</option>
+                </select>
+              </div>
+              <div>
+                <label className="filter-label">Buy/Rent:</label>
+                <select onChange={(e) => setTodo(e.target.value)}>
+                  <option value={"buy"}>buy</option>
+                  <option value={"rent"}>rent</option>
+                </select>
+              </div>
+              <div>
+                <label className="filter-label">Area(Sq Ft):</label>
+                <input
+                  type="range"
+                  min="500"
+                  max="50000"
+                  step="150"
+                  onChange={(e) => setArea(parseInt(e.target.value))}
+                />
+                <label className="value-label"> {area}</label>
+              </div>
+              <div>
+                <label className="filter-label">Min(&#8377;):</label>
+                <input
+                  type="range"
+                  min="10000"
+                  max="7500000"
+                  step="50000"
+                  onChange={(e) => setMinPrice(parseInt(e.target.value))}
+                />
+                <label className="value-label">{minprice}</label>
+              </div>
+              <div>
+                <label className="filter-label">Max(&#8377;):</label>
+                <input
+                  type="range"
+                  min="100000"
+                  max="7500000"
+                  step="50000"
+                  onChange={(e) => setMaxPrice(parseInt(e.target.value))}
+                />
+                <label className="value-label">{maxprice}</label>
+              </div>
+            </div>
+            <button className="filter-btn" onClick={handleFilter}>
+              Search&nbsp;
+              <i className="fa fa-search"></i>
+            </button>
           </span>
-          <div className="filters">
-            <div>
-              <label className="filter-label">Bedrooms: </label>
-              <select onChange={(e) => setBedroom(parseInt(e.target.value))}>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5}>5</option>
-                <option value={6}>6</option>
-                <option value={7}>7</option>
-              </select>
-            </div>
-            <div>
-              <label className="filter-label">Bathrooms:</label>
-              <select onChange={(e) => setBathroom(parseInt(e.target.value))}>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5}>5</option>
-                <option value={6}>6</option>
-                <option value={7}>7</option>
-              </select>
-            </div>
-            <div>
-              <label className="filter-label">Buy/Rent:</label>
-              <select onChange={(e) => setTodo(e.target.value)}>
-                <option value={"buy"}>buy</option>
-                <option value={"rent"}>rent</option>
-              </select>
-            </div>
-            <div>
-              <label className="filter-label">Area(Sq Ft):</label>
-              <input
-                type="range"
-                min="500"
-                max="50000"
-                step="150"
-                onChange={(e) => setArea(parseInt(e.target.value))}
-              />
-              <label className="value-label"> {area}</label>
-            </div>
-            <div>
-              <label className="filter-label">Min(&#8377;):</label>
-              <input
-                type="range"
-                min="10000"
-                max="7500000"
-                step="50000"
-                onChange={(e) => setMinPrice(parseInt(e.target.value))}
-              />
-              <label className="value-label">{minprice}</label>
-            </div>
-            <div>
-              <label className="filter-label">Max(&#8377;):</label>
-              <input
-                type="range"
-                min="100000"
-                max="7500000"
-                step="50000"
-                onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-              />
-              <label className="value-label">{maxprice}</label>
-            </div>
-          </div>
-          <button className="filter-btn" onClick={handleFilter}>
-            Search&nbsp;
-            <i className="fa fa-search"></i>
-          </button>
         </div>
-      </div>
-      <div className="budget">
-        <center>
-          <h1>
-            Not sure about your budget.. check our{" "}
-            <Link to="/calculator" className="emilink">
-              emi calculator
-            </Link>
-          </h1>
-        </center>
+
+        <div className="budget">
+          <center>
+            <h1>
+              Not sure about your budget.. check our{" "}
+              <Link to="/calculator" className="emilink">
+                emi calculator
+              </Link>
+            </h1>
+          </center>
+        </div>
       </div>
       <center>
         <h1 className="err">{gotData}</h1>
